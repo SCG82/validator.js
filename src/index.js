@@ -1,3 +1,5 @@
+import { createRequire } from 'module';
+
 import toDate from './lib/toDate.js';
 import toFloat from './lib/toFloat.js';
 import toInt from './lib/toInt.js';
@@ -123,7 +125,8 @@ import isStrongPassword from './lib/isStrongPassword.js';
 
 import isVAT from './lib/isVAT.js';
 
-const version = '13.7.0';
+const require = createRequire(import.meta.url);
+const version = require('../package.json').version;
 
 const validator = {
   version,
