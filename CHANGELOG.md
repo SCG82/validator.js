@@ -1,3 +1,9 @@
+# 1.0.0
+
+### New Features
+
+- ESM support
+
 ## 13.7.0
 
 ### New Features

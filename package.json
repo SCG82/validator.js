@@ -1,7 +1,7 @@
 {
   "name": "@scg82/validator",
   "description": "String validation and sanitization",
-  "version": "13.7.0",
+  "version": "1.0.0",
   "sideEffects": false,
   "type": "module",
   "homepage": "https://github.com/SCG82/validator.js",
