@@ -1,10 +1,10 @@
 {
-  "name": "validator",
+  "name": "@scg82/validator",
   "description": "String validation and sanitization",
   "version": "13.7.0",
   "sideEffects": false,
   "type": "module",
-  "homepage": "https://github.com/validatorjs/validator.js",
+  "homepage": "https://github.com/SCG82/validator.js",
   "files": [
     "index.js",
     "es",
@@ -33,7 +33,8 @@
   "exports": {
     ".": {
       "import": "./es/index.js",
-      "require": "./index.js"
+      "require": "./index.js",
+      "browser": "./validator.min.js"
     },
     "./index.js": {
       "import": "./es/index.js",
@@ -41,21 +42,35 @@
     },
     "./es": "./es/index.js",
     "./es/lib/*": "./es/lib/*.js",
+    "./es/lib/*.js": "./es/lib/*.js",
     "./es/*": "./es/lib/*.js",
+    "./es/*.js": "./es/lib/*.js",
+    "./lib/*": {
+      "import": "./es/lib/*.js",
+      "require": "./lib/*.js"
+    },
+    "./lib/*.js": {
+      "import": "./es/lib/*.js",
+      "require": "./lib/*.js"
+    },
     "./package.json": "./package.json",
     "./validator.js": "./validator.js",
     "./validator.min.js": "./validator.min.js",
     "./*": {
       "import": "./es/lib/*.js",
       "require": "./lib/*.js"
+    },
+    "./*.js": {
+      "import": "./es/lib/*.js",
+      "require": "./lib/*.js"
     }
   },
   "bugs": {
-    "url": "https://github.com/validatorjs/validator.js/issues"
+    "url": "https://github.com/SCG82/validator.js/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/validatorjs/validator.js.git"
+    "url": "git+https://github.com/SCG82/validator.js.git"
   },
   "devDependencies": {
     "@babel/cli": "^7.20.7",

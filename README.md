@@ -3,12 +3,14 @@
 [![CI][ci-image]][ci-url]
 [![Coverage][codecov-image]][codecov-url]
 [![Downloads][downloads-image]][npm-url]
-[![Backers on Open Collective](https://opencollective.com/validatorjs/backers/badge.svg)](#backers)
-[![Sponsors on Open Collective](https://opencollective.com/validatorjs/sponsors/badge.svg)](#sponsors)
-[![Gitter][gitter-image]][gitter-url]
-[![Disclose a vulnerability][huntr-image]][huntr-url]
+<!-- [![Backers on Open Collective](https://opencollective.com/validatorjs/backers/badge.svg)](#backers) -->
+<!-- [![Sponsors on Open Collective](https://opencollective.com/validatorjs/sponsors/badge.svg)](#sponsors) -->
+<!-- [![Gitter][gitter-image]][gitter-url] -->
+<!-- [![Disclose a vulnerability][huntr-image]][huntr-url] -->
 
 A library of string validators and sanitizers.
+
+This is a fork of [validatorjs/validator](https://github.com/validatorjs/validator.js) with ESM support.
 
 ## Strings only
 
@@ -21,12 +23,12 @@ Passing anything other than a string will result in an error.
 
 ### Server-side usage
 
-Install the library with `npm install validator`
+Install the library with `npm install @scg82/validator`
 
 #### No ES6
 
 ```javascript
-var validator = require('validator');
+var validator = require('@scg82/validator');
 
 validator.isEmail('foo@bar.com'); //=> true
 ```
@@ -34,19 +36,19 @@ validator.isEmail('foo@bar.com'); //=> true
 #### ES6
 
 ```javascript
-import validator from 'validator';
+import validator from '@scg82/validator';
 ```
 
 Or, import only a subset of the library:
 
 ```javascript
-import isEmail from 'validator/lib/isEmail';
+import isEmail from '@scg82/validator/lib/isEmail';
 ```
 
 #### Tree-shakeable ES imports
 
 ```javascript
-import isEmail from 'validator/es/lib/isEmail';
+import { isEmail } from '@scg82/validator';
 ```
 
 ### Client-side usage
@@ -65,7 +67,7 @@ The library can also be installed through [bower][bower]
 ```bash
 $ bower install validator-js
 ```
-
+<!-- 
 CDN
 
 ```html
@@ -81,6 +83,7 @@ CDN
 Thank you to the people who have already contributed:
 
 <a href="https://github.com/validatorjs/validator.js/graphs/contributors"><img src="https://opencollective.com/validatorjs/contributors.svg?width=890" /></a>
+-->
 
 ## Validators
 
@@ -262,20 +265,20 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [downloads-image]: http://img.shields.io/npm/dm/validator.svg
 
-[npm-url]: https://npmjs.org/package/validator
+[npm-url]: https://npmjs.org/package/scg82/validator
 [npm-image]: http://img.shields.io/npm/v/validator.svg
 
-[codecov-url]: https://codecov.io/gh/validatorjs/validator.js
-[codecov-image]: https://codecov.io/gh/validatorjs/validator.js/branch/master/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/SCG82/validator.js
+[codecov-image]: https://codecov.io/gh/SCG82/validator.js/branch/master/graph/badge.svg
 
-[ci-url]: https://github.com/validatorjs/validator.js/actions?query=workflow%3ACI
-[ci-image]: https://github.com/validatorjs/validator.js/workflows/CI/badge.svg?branch=master
+[ci-url]: https://github.com/SCG82/validator.js/actions?query=workflow%3ACI
+[ci-image]: https://github.com/SCG82/validator.js/workflows/CI/badge.svg?branch=master
 
 [gitter-url]: https://gitter.im/validatorjs/community
 [gitter-image]: https://badges.gitter.im/validatorjs/community.svg
 
-[huntr-url]: https://huntr.dev/bounties/disclose/?target=https://github.com/validatorjs/validator.js
-[huntr-image]: https://cdn.huntr.dev/huntr_security_badge_mono.svg
+<!-- [huntr-url]: https://huntr.dev/bounties/disclose/?target=https://github.com/validatorjs/validator.js -->
+<!-- [huntr-image]: https://cdn.huntr.dev/huntr_security_badge_mono.svg -->
 
 [amd]: http://requirejs.org/docs/whyamd.html
 [bower]: http://bower.io/
